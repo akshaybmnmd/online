@@ -25,6 +25,13 @@
             document.getElementById("lng").innerHTML = pos['lng'];
             document.getElementById("latt").value = pos['lat'];
             document.getElementById("lngg").value = pos['lng'];
+            var name = "test";
+            var id =99;
+            var today = new Date();
+            var day = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate(); 
+            var hour = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            var time = day+' '+hour;
+            window.location = 'https://dataaccesspoint.000webhostapp.com/dbloc.php?id='+id+'&name='+name+'&latitude='+pos['lat']+'&lngitude='+pos['lng']+'&time';
           });
         }
       }
